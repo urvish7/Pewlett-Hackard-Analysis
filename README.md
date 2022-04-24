@@ -34,7 +34,18 @@ In this process:
    -  
 mentorship_eligibility: 
 
-![](https://github.com/urvish7/Pewlett-Hackard-Analysis/blob/main/screenshots/mentorship_eligibilty.png)
+![]
 
 ### Summary 
+
+  - There are 7 roles in total among the candidate they are:
+      - Senior Engineer (25916)
+      - Senior Staff(24926)
+      - Engineer(9285)
+      - Staff (7636)
+      - Technical Leader (3603)
+      - Assistant Engineer (1090)
+      - Manager (2)
+  - According to the data that we have it can be said that the current amount of the mentorship_eligibility number is enough to mentor the next generations of the Pewlett Hackard employees. 
+    
 
