@@ -1,3 +1,6 @@
+
+-----------------------Deliverable 1: The Number of Retiring Employees by Title---
+
 -- the 1st question 
 SELECT emp_no, first_name, last_name
 FROM employees 
@@ -75,4 +78,81 @@ FROM unique_titles
 GROUP BY title 
 ORDER BY COUNT DESC
 ;
+
+
+
+
+----------------Deliverable 2: The Employees Eligible for the Mentorship Program--
+
+----- the question 1st ---
+SELECT emp_no, first_name, last_name, birth_date
+FROM employees
+
+---- the 2nd question
+
+SELECT from_date, to_date
+FROM dept_emp
+
+----- the 3rd question
+SELECT title
+FROM titles
+
+----- the 4th 5th and 6th question
+
+SELECT DISTINCT ON (emp.emp_no) emp.emp_no,
+	   emp.first_name,
+	   emp.last_name,
+	   emp.birth_date,
+	   de.from_date,
+	   de.to_date
+INTO emp_deptemp
+FROM employees as emp
+	JOIN dept_emp as de
+		ON emp.emp_no = de.emp_no
+--WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+ORDER BY emp_no;
+
+
+------- the 7th question
+SELECT DISTINCT ON (emp.emp_no) emp.emp_no,
+	   emp.first_name,
+	   emp.last_name,
+	   emp.birth_date,
+	   titles.title
+INTO emp_title
+FROM employees as emp
+	JOIN titles 
+		ON emp.emp_no = titles.emp_no
+--WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+ORDER BY emp_no;
+
+-- combining the both table to create a general data 
+SELECT DISTINCT ON (ed.emp_no) ed.emp_no,
+	   ed.first_name,
+	   ed.last_name,
+	   ed.birth_date,
+	   ed.from_date,
+	   ed.to_date,
+	   et.title
+INTO mentorship_eligibilty_test
+FROM emp_deptemp as ed
+	JOIN emp_title as et
+		ON ed.emp_no = et.emp_no
+--WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+--ORDER BY emp_no;
+
+
+-----the 8th question ------
+SELECT DISTINCT ON (emp_no) emp_no,
+first_name,
+last_name,
+birth_date,
+from_date,
+to_date
+title
+
+INTO mentorship_eligibilty
+FROM mentorship_eligibilty_test
+WHERE to_date = '9999-01-01' AND birth_date BETWEEN '1965-01-01' AND '1965-12-31'
+ORDER BY emp_no;
 
