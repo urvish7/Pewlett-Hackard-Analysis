@@ -12,6 +12,9 @@ In this Analysis section we going to use the ERD that been created as the refere
   - We have retrived the emp_no, first_name, last_name , title. from_date, to_date from the employees and titles table respectively, 
   - Then filtered the data on the birth_date born between 1952 and 1955 and posted in retirement_title table. 
   - It looks like:
+
+
+
 ![](https://github.com/urvish7/Pewlett-Hackard-Analysis/blob/main/screenshots/retirement.png)
 
 Then we have the DISTINCT ON statement to retrieve the first occurrence of the employee number. excluded the employees who have left or has previous position records and after that we have posted that in unique_titles table. look like:
@@ -31,7 +34,7 @@ In this process:
    - We have Joined tables in order to filter the data at best possible way.    - We  only kept the current  employees 
    - Then filtered the table with birth_date colums to get all the employees whose birthdates are between January 1,1965 and December 31, 1965.
    -  Then sorted the table by employee number.
-   -  
+     
 mentorship_eligibility: 
 
 ![](https://github.com/urvish7/Pewlett-Hackard-Analysis/blob/main/screenshots/mentorship_eligibilty.png)
