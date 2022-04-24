@@ -1,0 +1,18 @@
+--SELECT * FROM retirement
+--SELECT * FROM employees
+--SELECT * FROM unique_titles
+--SELECT * FROM retiring_titles
+
+--SELECT DISTINCT emp_no 
+--FROM retirement as ret
+--ON (emp_no = emp_no)
+--;
+
+
+-- the 16th , 17th, 18th and 19th question
+-- SELECT  count(emp_no),title
+-- INTO retiring_titles
+-- FROM unique_titles
+-- GROUP BY title 
+-- ORDER BY COUNT DESC
+-- ;
