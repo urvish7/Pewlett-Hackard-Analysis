@@ -35,7 +35,7 @@ In this process:
    - Then filtered the table with birth_date colums to get all the employees whose birthdates are between January 1,1965 and December 31, 1965.
    -  Then sorted the table by employee number.
      
-mentorship_eligibility: 
+mentorship_eligibilty: 
 
 ![](https://github.com/urvish7/Pewlett-Hackard-Analysis/blob/main/screenshots/mentorship_eligibilty.png)
 
